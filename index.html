@@ -90,6 +90,35 @@
             line-height: 1.6;
             text-align: left;
         }
+
+        /* gallery section section */
+         .gallery-container{
+        padding: 10px;
+        border: none;
+        border-radius: 15px;
+        background-color: grey;
+    }
+
+    h1{
+        color: #fff;
+    }
+
+    .image-container{
+        display: flex;
+        gap: 20px;
+    }
+
+    .image-card{
+        height: 20rem;
+        width: 30rem;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /* gallery section ends */
   </style>
 </head>
 <body>
@@ -123,5 +152,23 @@
             </ul>
         </section>
     </section>
+
+    <!-- gallery section -->
+     <div class="gallery-container">
+        <h1>Gallery</h1>
+        <div class="image-container">
+            <div class="image-card">
+            <img src="./image/01.jpg" alt="tree">
+        </div>
+
+        <div class="image-card">
+            <img src="./image/02.jpg" alt="nature">
+        </div>
+
+        <div class="image-card">
+            <img src="./image/03.jpg" alt="adventure">
+        </div>
+        </div>
+        <!-- gallery section ends -->
 </body>
 </html>
