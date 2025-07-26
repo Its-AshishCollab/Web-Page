@@ -93,7 +93,7 @@
             text-align: left;
         }
         /* background ends */
-        
+
         /* gallery section section */
          .gallery-container{
         padding: 10px;
@@ -120,6 +120,72 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      background: #fff;
+      padding: 30px;
+      margin: 40px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: none;
+    }
+
+    .contact-form button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
     }
     /* gallery section ends */
   </style>
@@ -173,5 +239,20 @@
         </div>
         </div>
         <!-- gallery section ends -->
+
+        <div class="contact-form">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Nature And Cosmic. All rights reserved. |
+    <a href="#">Privacy Policy</a>
+  </footer>
 </body>
 </html>
