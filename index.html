@@ -11,7 +11,7 @@
       box-sizing: border-box;
     }
 
-    body {
+    .content {
       font-family: Arial, sans-serif;
       background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1500&q=80');
       background-size: cover;
@@ -94,34 +94,80 @@
         }
         /* background ends */
         
-        /* gallery section section */
-         .gallery-container{
-        padding: 10px;
-        border: none;
-        border-radius: 15px;
-        background-color: grey;
-    }
-
-    h1{
-        color: #fff;
-    }
-
-    .image-container{
-        display: flex;
-        gap: 20px;
-    }
-
-    .image-card{
-        height: 20rem;
-        width: 30rem;
-    }
-
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    /* gallery section ends */
+        /* gallery section */
+        .gallery-section {
+            background: rgba(255,255,255,0.85); /* No image, just a light card */
+            border-radius: 18px;
+            margin: 3rem auto 2rem auto;
+            max-width: 1000px;
+            box-shadow: 0 6px 32px rgba(0,0,0,0.12);
+            position: relative;
+            overflow: hidden;
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .gallery-section h1 {
+            color: #222;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            font-size: 2rem;
+        }
+        .gallery-highlight {
+            background: linear-gradient(90deg, #a8e063 0%, #56ab2f 100%);
+            color: #fff;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 0 auto 1.5rem auto;
+            max-width: 600px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            box-shadow: 0 2px 12px rgba(88,175,85,0.12);
+        }
+        .gallery-section p {
+            color: #444;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+        .image-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .image-card {
+            height: 16rem;
+            width: 24rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(1px);
+            position: relative;
+        }
+        .image-card:hover {
+            transform: scale(1.04) translateY(-6px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            z-index: 2;
+        }
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.4s;
+            opacity: 0.97;
+        }
+        .image-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,rgba(0,0,0,0.04) 60%,rgba(0,0,0,0.10) 100%);
+            pointer-events: none;
+        }
+        /* gallery section ends */
   </style>
 </head>
 <body>
@@ -157,21 +203,26 @@
     </section>
 
     <!-- gallery section -->
-     <div class="gallery-container">
+    <div class="gallery-section">
         <h1>Gallery</h1>
+        <div class="gallery-highlight">
+            Discover the beauty of the cosmos and nature through our curated gallery. Each image is chosen to inspire and amaze!
+        </div>
+        <p>
+            Explore our handpicked collection of breathtaking cosmic and nature images. Each photo captures the wonder and beauty of our universe and planet, inspiring awe and curiosity.
+        </p>
         <div class="image-container">
             <div class="image-card">
-            <img src="./image/01.jpg" alt="tree">
+                <img src="./image/01.jpg" alt="tree">
+            </div>
+            <div class="image-card">
+                <img src="./image/02.jpg" alt="nature">
+            </div>
+            <div class="image-card">
+                <img src="./image/03.jpg" alt="adventure">
+            </div>
         </div>
-
-        <div class="image-card">
-            <img src="./image/02.jpg" alt="nature">
-        </div>
-
-        <div class="image-card">
-            <img src="./image/03.jpg" alt="adventure">
-        </div>
-        </div>
-        <!-- gallery section ends -->
+    </div>
+    <!-- gallery section ends -->
 </body>
 </html>
