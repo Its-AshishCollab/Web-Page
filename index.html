@@ -9,15 +9,12 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1500&q=80');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      min-height: 100vh;
+      background-color: #f9f9f9;
+      padding: 0;
     }
 
     .navbar {
@@ -26,13 +23,14 @@
       align-items: center;
       background-color: #333;
       padding: 15px 30px;
+      width: 100vw;
+      position: relative;
     }
 
     .logo {
-      color: #fff;
+      color: rgb(99, 198, 99);
       font-size: 24px;
       font-weight: bold;
-      color: rgb(99, 198, 99);
     }
 
     .nav-links {
@@ -53,85 +51,148 @@
       border-radius: 4px;
     }
 
-    /* background section */
+    .content {
+      background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 100vh;
+      width: 100vw;
+      padding-top: 80px;
+    }
+
+    /* Fix: remove margin-top from first content section */
+    .content > *:first-child {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+
     .main-content, .facts-section {
-            background: rgba(255, 255, 255, 0.35); 
-            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-            border-radius: 12px;
-            padding: 2rem;
-            max-width: 1000px;
-            margin: 2rem auto 0 auto; /* center and add spacing */
-        }
-        .main-content {
-            text-align: center;
-        }
-        .main-content h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .main-content p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.6;
-        }
-        .facts-section {
-            margin-top: 3rem;
-        }
-        .facts-section h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        .facts-section ul {
-            max-width: 800px;
-            margin: 1.5rem auto 0;
-            padding-left: 1.2rem;
-            color: #444;
-            line-height: 1.6;
-            text-align: left;
-        }
-        /* background ends */
-
-        /* gallery section section */
-         .gallery-container{
-        padding: 10px;
-        border: none;
-        border-radius: 15px;
-        background-color: grey;
+      background: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto; /* center, no top margin */
     }
 
-    h1{
-        color: #fff;
+    .main-content {
+      text-align: center;
+        margin-top: 2rem; /* add some space from the top */
     }
 
-    .image-container{
-        display: flex;
-        gap: 20px;
+    .main-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #333;
+      
     }
 
-    .image-card{
-        height: 20rem;
-        width: 30rem;
+    .main-content p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
     }
 
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .facts-section {
+      margin-top: 3rem;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
+    .facts-section h2 {
+      text-align: center;
+      color: #333;
     }
 
-    body {
-      background-color: #f9f9f9;
-      padding: 20px;
+    .facts-section ul {
+      max-width: 800px;
+      margin: 1.5rem auto 0;
+      padding-left: 1.2rem;
+      color: #444;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    /* Gallery Section */
+    .gallery-section {
+      background: rgba(255,255,255,0.85);
+      border-radius: 18px;
+      margin: 3rem auto 2rem auto;
+      max-width: 1000px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+      padding: 2.5rem 2rem 2rem 2rem;
+      width: 100%;
+    }
+
+    .gallery-section h1 {
+      color: #222;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
+      font-size: 2rem;
+    }
+
+    .gallery-highlight {
+      background: linear-gradient(90deg, #a8e063 0%, #56ab2f 100%);
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      text-align: center;
+      margin: 0 auto 1.5rem auto;
+      max-width: 600px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      box-shadow: 0 2px 12px rgba(88,175,85,0.12);
+    }
+
+    .gallery-section p {
+      color: #444;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+    }
+
+    .image-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .image-card {
+      height: 16rem;
+      width: 24rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(1px);
+      position: relative;
+    }
+
+    .image-card:hover {
+      transform: scale(1.04) translateY(-6px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      z-index: 2;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.4s;
+      opacity: 0.97;
+    }
+
+    .image-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,rgba(0,0,0,0.04) 60%,rgba(0,0,0,0.10) 100%);
+      pointer-events: none;
     }
 
     .contact-form {
@@ -187,13 +248,19 @@
       color: #fff;
       text-decoration: underline;
     }
-    /* gallery section ends */
+
+    @media (max-width: 1100px) {
+      .main-content, .facts-section, .gallery-section {
+        max-width: 98vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+      }
+    }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="logo">Cosmic And Nature</div>
-    </div>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
@@ -201,46 +268,51 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
+
   <section class="content">
-        <section class="main-content">
-            <h2>About the Cosmos</h2>
-            <p>
-                The cosmos is a vast and mysterious space filled with stars, galaxies, planets, and endless wonders.
-                It connects us to the universe and inspires curiosity beyond imagination. This website explores cosmic beauty
-                through visuals and stories, capturing the magic of nature and the skies above.
-            </p>
-        </section>
-        <section class="facts-section">
-            <h2>Quick Cosmic Facts</h2>
-            <ul>
-                <li>The observable universe is about 93 billion light-years in diameter.</li>
-                <li>Our solar system is located in the Orion Arm of the Milky Way galaxy.</li>
-                <li>There are more stars in the universe than grains of sand on Earth.</li>
-                <li>The closest galaxy to us is the Andromeda Galaxy, 2.5 million light-years away.</li>
-                <li>Black holes have such strong gravity that not even light can escape them.</li>
-            </ul>
-        </section>
+    <section class="main-content">
+      <h2>About the Cosmos</h2>
+      <p>
+        The cosmos is a vast and mysterious space filled with stars, galaxies, planets, and endless wonders.
+        It connects us to the universe and inspires curiosity beyond imagination. This website explores cosmic beauty
+        through visuals and stories, capturing the magic of nature and the skies above.
+      </p>
     </section>
 
-    <!-- gallery section -->
-     <div class="gallery-container">
-        <h1>Gallery</h1>
-        <div class="image-container">
-            <div class="image-card">
-            <img src="./image/01.jpg" alt="tree">
-        </div>
+    <section class="facts-section">
+      <h2>Quick Cosmic Facts</h2>
+      <ul>
+        <li>The observable universe is about 93 billion light-years in diameter.</li>
+        <li>Our solar system is located in the Orion Arm of the Milky Way galaxy.</li>
+        <li>There are more stars in the universe than grains of sand on Earth.</li>
+        <li>The closest galaxy to us is the Andromeda Galaxy, 2.5 million light-years away.</li>
+        <li>Black holes have such strong gravity that not even light can escape them.</li>
+      </ul>
+    </section>
+  </section>
 
-        <div class="image-card">
-            <img src="./image/02.jpg" alt="nature">
-        </div>
+  <div class="gallery-section">
+    <h1>Gallery</h1>
+    <div class="gallery-highlight">
+      Discover the beauty of the cosmos and nature through our curated gallery. Each image is chosen to inspire and amaze!
+    </div>
+    <p>
+      Explore our handpicked collection of breathtaking cosmic and nature images. Each photo captures the wonder and beauty of our universe and planet, inspiring awe and curiosity.
+    </p>
+    <div class="image-container">
+      <div class="image-card">
+        <img src="./image/01.jpg" alt="tree">
+      </div>
+      <div class="image-card">
+        <img src="./image/02.jpg" alt="nature">
+      </div>
+      <div class="image-card">
+        <img src="./image/03.jpg" alt="adventure">
+      </div>
+    </div>
+  </div>
 
-        <div class="image-card">
-            <img src="./image/03.jpg" alt="adventure">
-        </div>
-        </div>
-        <!-- gallery section ends -->
-
-        <div class="contact-form">
+  <div class="contact-form">
     <h2>Contact Us</h2>
     <form>
       <input type="text" name="name" placeholder="Your Name" required />
